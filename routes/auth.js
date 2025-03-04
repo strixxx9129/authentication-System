@@ -106,7 +106,7 @@ router.post('/reset-password-request', async (req, res) => {
         user.resetTokenExpiration = Date.now() + 3600000; // 1 hour
         await user.save();
 
-        console.log(`Reset link: http://your-app/reset-password/${resetToken}`); // For testing
+        console.log(`Reset link: http://user-authentication-system/reset-password/${resetToken}`); // this is used for password reset link
 
         res.json({ message: 'Password reset link sent' });
     } catch (err) {

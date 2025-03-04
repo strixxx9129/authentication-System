@@ -43,7 +43,6 @@ router.post(
   }
 );
 
-//Phase 5 Login
 router.post(
     '/login',
     [
@@ -78,7 +77,6 @@ router.post(
     }
 );
 
-//Phase 5 Protected route
 const authMiddleware = require('../middleware/authMiddleware');
 
 router.get('/protected', authMiddleware, async (req, res) => {
@@ -94,7 +92,6 @@ router.get('/protected', authMiddleware, async (req, res) => {
     }
 });
 
-//Phase 6 Password Reset
 router.post('/reset-password-request', async (req, res) => {
     const { email } = req.body;
 

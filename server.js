@@ -11,7 +11,7 @@ const helmet = require("helmet");
 app.use(helmet());
 
 const cors = require("cors");
-app.use(cors()); // Allow all origins (for development). In production, specify allowed origins.
+app.use(cors());
 app.use(express.json());
 
 mongoose
